@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"ordersystem/model"
 	"ordersystem/repository"
+	"time"
 
 	"github.com/go-chi/render"
 )
@@ -63,6 +64,7 @@ func PostOrder(db *repository.DatabaseHandler) http.HandlerFunc {
 			render.JSON(w, r, map[string]string{"error": "Invalid request"})
 			return
 		}
+		order.CreatedAt = time.Now()
 		db.AddOrder(&order)
 
 		render.Status(r, http.StatusOK)
