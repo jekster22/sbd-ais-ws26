@@ -5,6 +5,7 @@ the maintenance team: every reading goes through model.score(); every
 reading with score >= model.threshold becomes ONE anomaly event,
 model.anomaly_event(reading, score), as JSON, published to the topic
 `anomalies`.
+I used Claude to help me with logs and code.
 
     python3 detector_service.py --name det-1
     python3 detector_service.py --name det-2          # one more instance
