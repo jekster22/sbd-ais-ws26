@@ -1,0 +1,26 @@
+  started  baseline: baseline_detector.py 
+[baseline] [baseline] polling table readings for id > 18000 (Ctrl+C to stop)
+  started  plant: plant.py --sink postgres --duration 60
+[plant] run 1793878733: 60 machines x 10 Hz = 600 readings/s -> postgres (Ctrl+C to stop)
+[plant]   t=    5s      3,060 readings sent (612/s)
+[baseline] [baseline] read    2,097  backlog   2,265 rows  delay   3.9 s  missing      3  anomalies 0
+[plant]   t=   10s      6,060 readings sent (606/s)
+[baseline] [baseline] read    4,097  backlog   4,422 rows  delay   7.5 s  missing     18  anomalies 0
+[plant]   t=   15s      9,060 readings sent (604/s)
+[plant]   t=   20s     12,060 readings sent (603/s)
+[baseline] [baseline] read    6,097  backlog   6,517 rows  delay  11.0 s  missing     18  anomalies 0
+[plant]   t=   25s     15,060 readings sent (602/s)
+[baseline] [baseline] read    8,097  backlog   8,820 rows  delay  15.0 s  missing     18  anomalies 0
+[plant]   t=   30s     18,060 readings sent (602/s)
+[plant]   t=   35s     21,060 readings sent (602/s)
+[baseline] [baseline] read   10,097  backlog  11,020 rows  delay  18.5 s  missing     18  anomalies 0
+[plant]   t=   40s  fault starts on M-029 (repaired in 45 s)
+[plant]   t=   40s     24,060 readings sent (601/s)  faulty: M-029
+[baseline] [baseline] read   12,097  backlog  13,281 rows  delay  22.3 s  missing     18  anomalies 0
+[plant]   t=   45s     27,060 readings sent (601/s)  faulty: M-029
+[baseline] [baseline] read   14,097  backlog  15,571 rows  delay  26.1 s  missing     18  anomalies 0
+[plant]   t=   50s     30,060 readings sent (601/s)  faulty: M-029
+[plant]   t=   55s     33,060 readings sent (601/s)  faulty: M-029
+[baseline] [baseline] read   16,097  backlog  17,771 rows  delay  29.8 s  missing     18  anomalies 0
+[plant] run 1793878733: sent 36,000 readings in 61 s
+[baseline] [baseline] stopped: read 16,097 readings, last id 35,283, 18 readings missing, 0 anomalies

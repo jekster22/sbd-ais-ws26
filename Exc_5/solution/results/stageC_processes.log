@@ -1,0 +1,219 @@
+  started  det-1: detector_service.py --name det-1
+  started  det-2: detector_service.py --name det-2
+  started  det-3: detector_service.py --name det-3
+  started  det-4: detector_service.py --name det-4
+[det-1] [det-1] readings -> anomalies, group line-guardian-detector (Ctrl+C to stop)
+[det-2] [det-2] readings -> anomalies, group line-guardian-detector (Ctrl+C to stop)
+[det-3] [det-3] readings -> anomalies, group line-guardian-detector (Ctrl+C to stop)
+[det-4] [det-4] readings -> anomalies, group line-guardian-detector (Ctrl+C to stop)
+[det-2] [det-2] assigned partitions: [1, 3, 5, 7, 9, 11]
+[det-1] [det-1] assigned partitions: [0, 2, 4, 6, 8, 10]
+[det-2] %4|1793878807.184|GETPID|det-2-anomalies#producer-2| [thrd:main]: Failed to acquire idempotence PID from broker localhost:9092/1: Broker: Coordinator load in progress: retrying
+[det-1] %4|1793878807.184|GETPID|det-1-anomalies#producer-2| [thrd:main]: Failed to acquire idempotence PID from broker localhost:9092/1: Broker: Coordinator load in progress: retrying
+[det-3] %4|1793878807.198|GETPID|det-3-anomalies#producer-2| [thrd:main]: Failed to acquire idempotence PID from broker localhost:9092/1: Broker: Coordinator load in progress: retrying
+[det-4] [det-4] assigned partitions: []
+3, 5] (forgot 0 machines)
+[det-3] [det-3] assigned partitions: []
+[det-1] [det-1] revoked partitions:  [0, 2, 4] (forgot 0 machines)
+[det-2] [det-2] assigned partitions: []
+[det-1] [det-1] assigned partitions: []
+[det-1] [det-1] assigned partitions: []
+3, 5]
+[det-4] [det-4] assigned partitions: [0, 2, 4]
+[det-2] [det-2] assigned partitions: []
+  started  plant: plant.py --sink kafka --machines 60 --hz 10 --duration 180
+[plant] run 1793878816: 60 machines x 10 Hz = 600 readings/s -> kafka (Ctrl+C to stop)
+[det-1] [det-1]         1 readings       0 anomalies  missing 0  out-of-order 0  machines 1  delay 1.30 s
+[det-1] [det-1]         2 readings       0 anomalies  missing 0  out-of-order 0  machines 2  delay 1.30 s
+[det-2] [det-2]         1 readings       0 anomalies  missing 0  out-of-order 0  machines 1  delay 1.30 s
+[det-2] [det-2]         2 readings       0 anomalies  missing 0  out-of-order 0  machines 2  delay 1.31 s
+[det-3] [det-3]         1 readings       0 anomalies  missing 0  out-of-order 0  machines 1  delay 1.31 s
+[det-3] [det-3]         2 readings       0 anomalies  missing 0  out-of-order 0  machines 2  delay 1.31 s
+[det-4] [det-4]         1 readings       0 anomalies  missing 0  out-of-order 0  machines 1  delay 1.32 s
+[det-4] [det-4]         2 readings       0 anomalies  missing 0  out-of-order 0  machines 2  delay 1.32 s
+[det-1] [det-1]       471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]       706 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]       904 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]       769 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=    5s      3,060 readings sent (612/s)
+[det-1] [det-1]       971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]     1,456 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]     1,855 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     1,569 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   10s      6,060 readings sent (606/s)
+[det-1] [det-1]     1,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]     2,206 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]     2,804 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     2,369 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.03 s
+[plant]   t=   15s      9,060 readings sent (604/s)
+[det-1] [det-1]     1,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]     2,956 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-3] [det-3]     3,752 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     3,167 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.07 s
+[plant]   t=   20s     12,060 readings sent (603/s)
+[det-1] [det-1]     2,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]     3,706 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]     4,704 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     3,969 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   25s     15,060 readings sent (602/s)
+[det-1] [det-1]     2,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.01 s
+[det-2] [det-2]     4,456 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.01 s
+[det-3] [det-3]     5,655 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     4,769 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   30s     18,060 readings sent (602/s)
+[det-2] [det-2]     5,206 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-1] [det-1]     3,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-3] [det-3]     6,603 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     5,569 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.03 s
+[plant]   t=   35s     21,060 readings sent (602/s)
+[det-2] [det-2]     5,956 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-3] [det-3]     7,552 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     6,368 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.08 s
+[plant]   t=   40s  fault starts on M-029 (repaired in 45 s)
+[plant]   t=   40s     24,060 readings sent (601/s)  faulty: M-029
+[det-1] [det-1]     4,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]     6,706 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]     8,504 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     7,169 readings       0 anomalies  missing 0  out-of-order 0  machines 16  delay 0.03 s
+[plant]   t=   45s     27,060 readings sent (601/s)  faulty: M-029
+[det-1] [det-1]     4,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.01 s
+[det-2] [det-2]     7,457 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]     9,455 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     7,969 readings      19 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   50s     30,060 readings sent (601/s)  faulty: M-029
+[det-1] [det-1]     5,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]     8,206 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    10,404 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     8,769 readings      69 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   55s     33,060 readings sent (601/s)  faulty: M-029
+[det-2] [det-2]     8,956 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-1] [det-1]     5,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-3] [det-3]    11,353 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]     9,569 readings     119 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   60s     36,060 readings sent (601/s)  faulty: M-029
+[det-1] [det-1]     6,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]     9,706 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    12,302 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    10,369 readings     169 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   65s     39,060 readings sent (601/s)  faulty: M-029
+[det-1] [det-1]     6,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.03 s
+[det-2] [det-2]    10,456 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-3] [det-3]    13,252 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    11,167 readings     219 anomalies  missing 0  out-of-order 0  machines 16  delay 0.08 s
+[plant]   t=   70s     42,060 readings sent (601/s)  faulty: M-029
+[det-1] [det-1]     7,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.01 s
+[det-2] [det-2]    11,207 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    14,204 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    11,969 readings     269 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   75s     45,060 readings sent (601/s)  faulty: M-029
+[det-2] [det-2]    11,956 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-1] [det-1]     7,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-3] [det-3]    15,153 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    12,769 readings     319 anomalies  missing 0  out-of-order 0  machines 16  delay 0.03 s
+[plant]   t=   80s     48,060 readings sent (601/s)  faulty: M-029
+[det-1] [det-1]     8,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.01 s
+[det-2] [det-2]    12,707 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    16,104 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    13,569 readings     369 anomalies  missing 0  out-of-order 0  machines 16  delay 0.03 s
+[plant]   t=   85s     51,060 readings sent (601/s)  faulty: M-029
+[det-2] [det-2]    13,456 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-1] [det-1]     8,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-3] [det-3]    17,052 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    14,368 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.08 s
+[plant]   t=   90s     54,060 readings sent (601/s)
+[det-2] [det-2]    14,206 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.01 s
+[det-3] [det-3]    18,006 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    15,169 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=   95s     57,060 readings sent (601/s)
+[det-2] [det-2]    14,956 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-1] [det-1]     9,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-3] [det-3]    18,954 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    15,969 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.01 s
+[plant]   t=  100s  fault starts on M-017 (repaired in 45 s)
+[plant]   t=  100s     60,060 readings sent (601/s)  faulty: M-017
+[det-2] [det-2]    15,706 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-1] [det-1]    10,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.03 s
+[det-3] [det-3]    19,902 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    16,768 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.07 s
+[plant]   t=  105s     63,060 readings sent (601/s)  faulty: M-017
+[det-1] [det-1]    10,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]    16,456 readings       0 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    20,854 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    17,569 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=  110s     66,060 readings sent (601/s)  faulty: M-017
+[det-1] [det-1]    11,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]    17,206 readings      25 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    21,805 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    18,369 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=  115s     69,060 readings sent (601/s)  faulty: M-017
+[det-1] [det-1]    11,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]    17,956 readings      75 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-3] [det-3]    22,752 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    19,168 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.08 s
+[plant]   t=  120s     72,060 readings sent (600/s)  faulty: M-017
+[det-1] [det-1]    12,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]    18,706 readings     125 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    23,703 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    19,969 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.03 s
+[plant]   t=  125s     75,060 readings sent (600/s)  faulty: M-017
+[det-1] [det-1]    12,972 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.01 s
+[det-2] [det-2]    19,457 readings     176 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    24,656 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    20,769 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=  130s     78,060 readings sent (600/s)  faulty: M-017
+[det-1] [det-1]    13,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.03 s
+[det-2] [det-2]    20,206 readings     225 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-3] [det-3]    25,601 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    21,567 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.07 s
+[plant]   t=  135s     81,060 readings sent (600/s)  faulty: M-017
+[det-1] [det-1]    13,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.01 s
+[det-2] [det-2]    20,957 readings     276 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    26,554 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    22,369 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=  140s     84,060 readings sent (600/s)  faulty: M-017
+[det-1] [det-1]    14,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.03 s
+[det-2] [det-2]    21,706 readings     326 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-3] [det-3]    27,502 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    23,168 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.08 s
+[plant]   t=  145s     87,060 readings sent (600/s)  faulty: M-017
+[det-1] [det-1]    14,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]    22,456 readings     367 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-3] [det-3]    28,453 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    23,969 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=  150s     90,060 readings sent (600/s)
+[det-1] [det-1]    15,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]    23,206 readings     367 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    29,401 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    24,768 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.08 s
+[plant]   t=  155s     93,060 readings sent (600/s)
+[det-1] [det-1]    15,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-3] [det-3]    30,353 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    25,569 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=  160s     96,060 readings sent (600/s)
+[plant]   t=  160s  fault starts on M-020 (repaired in 45 s)
+[det-1] [det-1]    16,471 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-3] [det-3]    31,303 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    26,369 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.01 s
+[plant]   t=  165s     99,060 readings sent (600/s)  faulty: M-020
+[det-2] [det-2]    25,456 readings     367 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-1] [det-1]    16,971 readings       0 anomalies  missing 0  out-of-order 0  machines 10  delay 0.03 s
+[det-3] [det-3]    32,251 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    27,167 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.08 s
+[plant]   t=  170s    102,060 readings sent (600/s)  faulty: M-020
+[det-1] [det-1]    17,471 readings      27 anomalies  missing 0  out-of-order 0  machines 10  delay 0.02 s
+[det-2] [det-2]    26,206 readings     367 anomalies  missing 0  out-of-order 0  machines 15  delay 0.02 s
+[det-3] [det-3]    33,205 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    27,969 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.02 s
+[plant]   t=  175s    105,060 readings sent (600/s)  faulty: M-020
+[det-2] [det-2]    26,956 readings     367 anomalies  missing 0  out-of-order 0  machines 15  delay 0.03 s
+[det-3] [det-3]    34,152 readings       0 anomalies  missing 0  out-of-order 0  machines 19  delay 0.05 s
+[det-4] [det-4]    28,765 readings     411 anomalies  missing 0  out-of-order 0  machines 16  delay 0.07 s
+[plant] run 1793878816: sent 108,000 readings in 180 s
+[det-1] [det-1] revoked partitions:  [6, 8, 10] (forgot 10 machines)
+[det-1] [det-1] stopped after 18,000 readings, 80 anomalies
+[det-2] [det-2] revoked partitions:  [7, 9, 11] (forgot 15 machines)
+[det-2] [det-2] stopped after 27,000 readings, 367 anomalies
+[det-3] [det-3] revoked partitions:  [1, 3, 5] (forgot 19 machines)
+[det-3] [det-3] stopped after 34,200 readings, 0 anomalies
+[det-4] [det-4] revoked partitions:  [0, 2, 4] (forgot 16 machines)
+[det-4] [det-4] stopped after 28,800 readings, 411 anomalies

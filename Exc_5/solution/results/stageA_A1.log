@@ -1,0 +1,405 @@
+  started  baseline: baseline_detector.py 
+[baseline] [baseline] polling table readings for id > 0 (Ctrl+C to stop)
+  started  plant: plant.py --sink postgres --machines 20 --duration 90
+[plant] run 1793878636: 20 machines x 10 Hz = 200 readings/s -> postgres (Ctrl+C to stop)
+[baseline] [baseline] read      726  backlog       4 rows  delay   0.2 s  missing     88  anomalies 0
+[plant]   t=    5s      1,020 readings sent (204/s)
+[baseline] [baseline] read    1,576  backlog      20 rows  delay   0.3 s  missing    224  anomalies 0
+[plant]   t=   10s      2,020 readings sent (202/s)
+[baseline] [baseline] read    2,506  backlog      36 rows  delay   0.4 s  missing    354  anomalies 0
+[plant]   t=   15s      3,020 readings sent (201/s)
+[baseline] [baseline] read    3,314  backlog      11 rows  delay   0.2 s  missing    496  anomalies 0
+[plant]   t=   20s      4,020 readings sent (201/s)
+[baseline] [baseline] read    4,231  backlog      35 rows  delay   0.3 s  missing    619  anomalies 0
+[plant]   t=   25s      5,020 readings sent (201/s)
+[baseline] [baseline] read    5,087  backlog      12 rows  delay   0.2 s  missing    748  anomalies 0
+[plant]   t=   30s      6,020 readings sent (201/s)
+[baseline] [baseline] read    5,878  backlog      25 rows  delay   0.3 s  missing    917  anomalies 0
+[plant]   t=   35s      7,020 readings sent (201/s)
+[baseline] [baseline] read    6,763  backlog      20 rows  delay   0.3 s  missing  1,077  anomalies 0
+[plant]   t=   40s  fault starts on M-006 (repaired in 45 s)
+[plant]   t=   40s      8,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] read    7,607  backlog      21 rows  delay   0.3 s  missing  1,228  anomalies 0
+[plant]   t=   45s      9,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] ANOMALY M-006 seq=488 score=5.26
+[baseline] [baseline] ANOMALY M-006 seq=489 score=5.86
+[baseline] [baseline] read    8,441  backlog      23 rows  delay   0.3 s  missing  1,359  anomalies 2
+[baseline] [baseline] ANOMALY M-006 seq=490 score=6.07
+[baseline] [baseline] ANOMALY M-006 seq=491 score=6.34
+[baseline] [baseline] ANOMALY M-006 seq=492 score=6.44
+[baseline] [baseline] ANOMALY M-006 seq=493 score=6.57
+[baseline] [baseline] ANOMALY M-006 seq=494 score=6.84
+[baseline] [baseline] ANOMALY M-006 seq=495 score=6.83
+[baseline] [baseline] ANOMALY M-006 seq=496 score=7.0
+[plant]   t=   50s     10,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] ANOMALY M-006 seq=497 score=6.95
+[baseline] [baseline] ANOMALY M-006 seq=498 score=7.01
+[baseline] [baseline] ANOMALY M-006 seq=499 score=7.01
+[baseline] [baseline] ANOMALY M-006 seq=500 score=7.4
+[baseline] [baseline] ANOMALY M-006 seq=503 score=7.51
+[baseline] [baseline] ANOMALY M-006 seq=504 score=7.62
+[baseline] [baseline] ANOMALY M-006 seq=505 score=7.79
+[baseline] [baseline] ANOMALY M-006 seq=506 score=8.03
+[baseline] [baseline] ANOMALY M-006 seq=507 score=8.26
+[baseline] [baseline] ANOMALY M-006 seq=508 score=8.55
+[baseline] [baseline] ANOMALY M-006 seq=509 score=8.63
+[baseline] [baseline] ANOMALY M-006 seq=512 score=8.73
+[baseline] [baseline] ANOMALY M-006 seq=513 score=8.75
+[baseline] [baseline] ANOMALY M-006 seq=514 score=8.86
+[baseline] [baseline] ANOMALY M-006 seq=515 score=8.96
+[baseline] [baseline] ANOMALY M-006 seq=516 score=8.97
+[baseline] [baseline] ANOMALY M-006 seq=517 score=9.13
+[baseline] [baseline] ANOMALY M-006 seq=518 score=9.45
+[baseline] [baseline] ANOMALY M-006 seq=519 score=9.68
+[baseline] [baseline] ANOMALY M-006 seq=520 score=9.78
+[baseline] [baseline] ANOMALY M-006 seq=521 score=10.05
+[baseline] [baseline] ANOMALY M-006 seq=522 score=10.36
+[baseline] [baseline] ANOMALY M-006 seq=523 score=10.45
+[baseline] [baseline] ANOMALY M-006 seq=524 score=10.69
+[baseline] [baseline] ANOMALY M-006 seq=526 score=10.89
+[baseline] [baseline] ANOMALY M-006 seq=527 score=10.67
+[baseline] [baseline] ANOMALY M-006 seq=528 score=10.79
+[baseline] [baseline] ANOMALY M-006 seq=529 score=10.78
+[baseline] [baseline] ANOMALY M-006 seq=532 score=10.6
+[baseline] [baseline] ANOMALY M-006 seq=533 score=10.86
+[baseline] [baseline] ANOMALY M-006 seq=534 score=10.95
+[baseline] [baseline] ANOMALY M-006 seq=535 score=11.07
+[baseline] [baseline] ANOMALY M-006 seq=536 score=11.2
+[baseline] [baseline] ANOMALY M-006 seq=537 score=11.41
+[baseline] [baseline] ANOMALY M-006 seq=538 score=11.24
+[baseline] [baseline] ANOMALY M-006 seq=539 score=11.76
+[baseline] [baseline] ANOMALY M-006 seq=540 score=12.01
+[baseline] [baseline] ANOMALY M-006 seq=541 score=12.25
+[baseline] [baseline] read    9,328  backlog      25 rows  delay   0.3 s  missing  1,522  anomalies 47
+[baseline] [baseline] ANOMALY M-006 seq=542 score=12.41
+[baseline] [baseline] ANOMALY M-006 seq=543 score=12.45
+[baseline] [baseline] ANOMALY M-006 seq=545 score=12.67
+[baseline] [baseline] ANOMALY M-006 seq=546 score=12.55
+[baseline] [baseline] ANOMALY M-006 seq=547 score=12.38
+[baseline] [baseline] ANOMALY M-006 seq=548 score=12.37
+[plant]   t=   55s     11,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] ANOMALY M-006 seq=550 score=12.44
+[baseline] [baseline] ANOMALY M-006 seq=551 score=12.82
+[baseline] [baseline] ANOMALY M-006 seq=552 score=13.01
+[baseline] [baseline] ANOMALY M-006 seq=553 score=13.15
+[baseline] [baseline] ANOMALY M-006 seq=554 score=13.2
+[baseline] [baseline] ANOMALY M-006 seq=555 score=13.45
+[baseline] [baseline] ANOMALY M-006 seq=556 score=13.54
+[baseline] [baseline] ANOMALY M-006 seq=557 score=13.71
+[baseline] [baseline] ANOMALY M-006 seq=558 score=13.83
+[baseline] [baseline] ANOMALY M-006 seq=559 score=13.94
+[baseline] [baseline] ANOMALY M-006 seq=560 score=14.01
+[baseline] [baseline] ANOMALY M-006 seq=561 score=13.98
+[baseline] [baseline] ANOMALY M-006 seq=562 score=14.24
+[baseline] [baseline] ANOMALY M-006 seq=563 score=14.41
+[baseline] [baseline] ANOMALY M-006 seq=564 score=14.38
+[baseline] [baseline] ANOMALY M-006 seq=565 score=14.67
+[baseline] [baseline] ANOMALY M-006 seq=566 score=14.62
+[baseline] [baseline] ANOMALY M-006 seq=567 score=14.87
+[baseline] [baseline] ANOMALY M-006 seq=568 score=15.17
+[baseline] [baseline] ANOMALY M-006 seq=569 score=15.39
+[baseline] [baseline] ANOMALY M-006 seq=570 score=15.37
+[baseline] [baseline] ANOMALY M-006 seq=571 score=15.46
+[baseline] [baseline] ANOMALY M-006 seq=573 score=15.63
+[baseline] [baseline] ANOMALY M-006 seq=574 score=15.63
+[baseline] [baseline] ANOMALY M-006 seq=575 score=15.65
+[baseline] [baseline] ANOMALY M-006 seq=576 score=15.7
+[baseline] [baseline] ANOMALY M-006 seq=577 score=15.81
+[baseline] [baseline] ANOMALY M-006 seq=578 score=15.87
+[baseline] [baseline] ANOMALY M-006 seq=579 score=16.08
+[baseline] [baseline] ANOMALY M-006 seq=580 score=16.0
+[baseline] [baseline] ANOMALY M-006 seq=581 score=15.95
+[baseline] [baseline] ANOMALY M-006 seq=582 score=16.02
+[baseline] [baseline] ANOMALY M-006 seq=583 score=16.02
+[baseline] [baseline] ANOMALY M-006 seq=589 score=16.22
+[baseline] [baseline] ANOMALY M-006 seq=590 score=16.51
+[baseline] [baseline] read   10,153  backlog      15 rows  delay   0.2 s  missing  1,652  anomalies 88
+[baseline] [baseline] ANOMALY M-006 seq=591 score=16.57
+[baseline] [baseline] ANOMALY M-006 seq=592 score=16.91
+[baseline] [baseline] ANOMALY M-006 seq=593 score=16.93
+[baseline] [baseline] ANOMALY M-006 seq=594 score=17.01
+[plant]   t=   60s     12,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] ANOMALY M-006 seq=596 score=17.31
+[baseline] [baseline] ANOMALY M-006 seq=599 score=17.56
+[baseline] [baseline] ANOMALY M-006 seq=600 score=17.47
+[baseline] [baseline] ANOMALY M-006 seq=601 score=17.44
+[baseline] [baseline] ANOMALY M-006 seq=602 score=17.26
+[baseline] [baseline] ANOMALY M-006 seq=603 score=17.31
+[baseline] [baseline] ANOMALY M-006 seq=604 score=17.37
+[baseline] [baseline] ANOMALY M-006 seq=605 score=17.48
+[baseline] [baseline] ANOMALY M-006 seq=606 score=17.71
+[baseline] [baseline] ANOMALY M-006 seq=608 score=17.77
+[baseline] [baseline] ANOMALY M-006 seq=610 score=17.87
+[baseline] [baseline] ANOMALY M-006 seq=611 score=17.88
+[baseline] [baseline] ANOMALY M-006 seq=612 score=17.87
+[baseline] [baseline] ANOMALY M-006 seq=613 score=17.97
+[baseline] [baseline] ANOMALY M-006 seq=614 score=17.91
+[baseline] [baseline] ANOMALY M-006 seq=615 score=18.11
+[baseline] [baseline] ANOMALY M-006 seq=616 score=18.07
+[baseline] [baseline] ANOMALY M-006 seq=617 score=18.37
+[baseline] [baseline] ANOMALY M-006 seq=618 score=18.53
+[baseline] [baseline] ANOMALY M-006 seq=619 score=18.57
+[baseline] [baseline] ANOMALY M-006 seq=620 score=18.62
+[baseline] [baseline] ANOMALY M-006 seq=621 score=18.77
+[baseline] [baseline] ANOMALY M-006 seq=623 score=18.94
+[baseline] [baseline] ANOMALY M-006 seq=624 score=18.87
+[baseline] [baseline] ANOMALY M-006 seq=625 score=18.87
+[baseline] [baseline] ANOMALY M-006 seq=626 score=19.01
+[baseline] [baseline] ANOMALY M-006 seq=627 score=18.91
+[baseline] [baseline] ANOMALY M-006 seq=628 score=19.13
+[baseline] [baseline] ANOMALY M-006 seq=629 score=19.13
+[baseline] [baseline] ANOMALY M-006 seq=630 score=19.08
+[baseline] [baseline] ANOMALY M-006 seq=631 score=19.15
+[baseline] [baseline] ANOMALY M-006 seq=632 score=19.47
+[baseline] [baseline] ANOMALY M-006 seq=633 score=19.73
+[baseline] [baseline] ANOMALY M-006 seq=634 score=19.95
+[baseline] [baseline] ANOMALY M-006 seq=635 score=19.95
+[baseline] [baseline] ANOMALY M-006 seq=636 score=20.1
+[baseline] [baseline] ANOMALY M-006 seq=637 score=20.18
+[baseline] [baseline] ANOMALY M-006 seq=638 score=20.11
+[baseline] [baseline] ANOMALY M-006 seq=639 score=20.11
+[baseline] [baseline] ANOMALY M-006 seq=640 score=20.11
+[baseline] [baseline] ANOMALY M-006 seq=641 score=20.17
+[baseline] [baseline] read   11,055  backlog      30 rows  delay   0.3 s  missing  1,790  anomalies 133
+[baseline] [baseline] ANOMALY M-006 seq=642 score=20.28
+[baseline] [baseline] ANOMALY M-006 seq=643 score=20.51
+[baseline] [baseline] ANOMALY M-006 seq=644 score=20.57
+[baseline] [baseline] ANOMALY M-006 seq=645 score=20.78
+[baseline] [baseline] ANOMALY M-006 seq=646 score=20.8
+[baseline] [baseline] ANOMALY M-006 seq=647 score=20.93
+[plant]   t=   65s     13,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] ANOMALY M-006 seq=648 score=20.98
+[baseline] [baseline] ANOMALY M-006 seq=649 score=21.02
+[baseline] [baseline] ANOMALY M-006 seq=650 score=21.02
+[baseline] [baseline] ANOMALY M-006 seq=651 score=21.02
+[baseline] [baseline] ANOMALY M-006 seq=652 score=21.04
+[baseline] [baseline] ANOMALY M-006 seq=653 score=21.15
+[baseline] [baseline] ANOMALY M-006 seq=654 score=21.18
+[baseline] [baseline] ANOMALY M-006 seq=656 score=21.28
+[baseline] [baseline] ANOMALY M-006 seq=657 score=21.28
+[baseline] [baseline] ANOMALY M-006 seq=658 score=21.45
+[baseline] [baseline] ANOMALY M-006 seq=659 score=21.51
+[baseline] [baseline] ANOMALY M-006 seq=660 score=21.51
+[baseline] [baseline] ANOMALY M-006 seq=662 score=21.69
+[baseline] [baseline] ANOMALY M-006 seq=663 score=21.69
+[baseline] [baseline] ANOMALY M-006 seq=664 score=21.82
+[baseline] [baseline] ANOMALY M-006 seq=666 score=21.83
+[baseline] [baseline] ANOMALY M-006 seq=667 score=21.9
+[baseline] [baseline] ANOMALY M-006 seq=668 score=22.04
+[baseline] [baseline] ANOMALY M-006 seq=669 score=22.04
+[baseline] [baseline] ANOMALY M-006 seq=670 score=22.13
+[baseline] [baseline] ANOMALY M-006 seq=671 score=22.15
+[baseline] [baseline] ANOMALY M-006 seq=672 score=22.12
+[baseline] [baseline] ANOMALY M-006 seq=673 score=22.12
+[baseline] [baseline] ANOMALY M-006 seq=674 score=22.15
+[baseline] [baseline] ANOMALY M-006 seq=675 score=22.15
+[baseline] [baseline] ANOMALY M-006 seq=676 score=22.15
+[baseline] [baseline] ANOMALY M-006 seq=677 score=22.22
+[baseline] [baseline] ANOMALY M-006 seq=678 score=22.22
+[baseline] [baseline] ANOMALY M-006 seq=679 score=22.24
+[baseline] [baseline] ANOMALY M-006 seq=680 score=22.37
+[baseline] [baseline] ANOMALY M-006 seq=681 score=22.38
+[baseline] [baseline] ANOMALY M-006 seq=682 score=22.38
+[baseline] [baseline] ANOMALY M-006 seq=683 score=22.46
+[baseline] [baseline] ANOMALY M-006 seq=684 score=22.46
+[baseline] [baseline] ANOMALY M-006 seq=685 score=22.44
+[baseline] [baseline] ANOMALY M-006 seq=686 score=22.44
+[baseline] [baseline] ANOMALY M-006 seq=687 score=22.44
+[baseline] [baseline] ANOMALY M-006 seq=688 score=22.44
+[baseline] [baseline] ANOMALY M-006 seq=689 score=22.44
+[baseline] [baseline] read   11,865  backlog      26 rows  delay   0.2 s  missing  1,935  anomalies 178
+[baseline] [baseline] ANOMALY M-006 seq=690 score=22.44
+[baseline] [baseline] ANOMALY M-006 seq=691 score=22.51
+[baseline] [baseline] ANOMALY M-006 seq=692 score=22.51
+[baseline] [baseline] ANOMALY M-006 seq=693 score=22.51
+[baseline] [baseline] ANOMALY M-006 seq=694 score=22.57
+[baseline] [baseline] ANOMALY M-006 seq=695 score=22.61
+[baseline] [baseline] ANOMALY M-006 seq=696 score=22.67
+[baseline] [baseline] ANOMALY M-006 seq=697 score=22.75
+[baseline] [baseline] ANOMALY M-006 seq=698 score=22.75
+[plant]   t=   70s     14,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] ANOMALY M-006 seq=699 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=702 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=704 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=705 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=707 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=708 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=709 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=711 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=712 score=22.76
+[baseline] [baseline] ANOMALY M-006 seq=713 score=22.85
+[baseline] [baseline] ANOMALY M-006 seq=714 score=22.85
+[baseline] [baseline] ANOMALY M-006 seq=716 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=717 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=718 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=719 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=720 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=722 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=723 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=725 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=726 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=727 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=728 score=22.95
+[baseline] [baseline] ANOMALY M-006 seq=729 score=22.96
+[baseline] [baseline] ANOMALY M-006 seq=730 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=731 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=732 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=733 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=734 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=735 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=736 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=737 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=738 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=739 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=740 score=23.0
+[baseline] [baseline] read   12,722  backlog      30 rows  delay   0.3 s  missing  2,098  anomalies 221
+[baseline] [baseline] ANOMALY M-006 seq=741 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=742 score=23.0
+[baseline] [baseline] ANOMALY M-006 seq=743 score=23.02
+[baseline] [baseline] ANOMALY M-006 seq=744 score=23.02
+[baseline] [baseline] ANOMALY M-006 seq=745 score=23.02
+[baseline] [baseline] ANOMALY M-006 seq=746 score=23.02
+[baseline] [baseline] ANOMALY M-006 seq=747 score=23.02
+[plant]   t=   75s     15,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] ANOMALY M-006 seq=748 score=23.02
+[baseline] [baseline] ANOMALY M-006 seq=749 score=23.02
+[baseline] [baseline] ANOMALY M-006 seq=750 score=23.02
+[baseline] [baseline] ANOMALY M-006 seq=751 score=23.02
+[baseline] [baseline] ANOMALY M-006 seq=752 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=753 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=754 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=755 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=756 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=757 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=758 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=759 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=760 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=761 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=762 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=763 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=764 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=765 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=766 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=767 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=768 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=769 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=770 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=771 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=772 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=773 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=774 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=775 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=776 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=777 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=778 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=779 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=780 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=782 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=783 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=784 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=785 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=787 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=788 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=789 score=23.07
+[baseline] [baseline] read   13,585  backlog       4 rows  delay   0.2 s  missing  2,225  anomalies 268
+[baseline] [baseline] ANOMALY M-006 seq=790 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=791 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=792 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=793 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=794 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=795 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=797 score=23.07
+[plant]   t=   80s     16,020 readings sent (200/s)  faulty: M-006
+[baseline] [baseline] ANOMALY M-006 seq=798 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=799 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=800 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=801 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=802 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=803 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=804 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=805 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=807 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=808 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=809 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=810 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=811 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=812 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=813 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=814 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=815 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=816 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=817 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=818 score=23.07
+[baseline] [baseline] ANOMALY M-006 seq=819 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=820 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=821 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=822 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=823 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=824 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=825 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=827 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=828 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=829 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=830 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=831 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=832 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=834 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=835 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=836 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=837 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=838 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=839 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=840 score=23.09
+[baseline] [baseline] read   14,422  backlog      14 rows  delay   0.2 s  missing  2,388  anomalies 315
+[baseline] [baseline] ANOMALY M-006 seq=841 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=842 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=843 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=844 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=845 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=846 score=23.09
+[plant]   t=   85s     17,020 readings sent (200/s)
+[baseline] [baseline] ANOMALY M-006 seq=848 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=849 score=23.09
+[baseline] [baseline] ANOMALY M-006 seq=850 score=22.51
+[baseline] [baseline] ANOMALY M-006 seq=852 score=22.11
+[baseline] [baseline] ANOMALY M-006 seq=853 score=21.51
+[baseline] [baseline] ANOMALY M-006 seq=854 score=21.12
+[baseline] [baseline] ANOMALY M-006 seq=855 score=20.64
+[baseline] [baseline] ANOMALY M-006 seq=856 score=20.19
+[baseline] [baseline] ANOMALY M-006 seq=857 score=19.91
+[baseline] [baseline] ANOMALY M-006 seq=859 score=19.52
+[baseline] [baseline] ANOMALY M-006 seq=860 score=18.95
+[baseline] [baseline] ANOMALY M-006 seq=862 score=18.58
+[baseline] [baseline] ANOMALY M-006 seq=863 score=18.19
+[baseline] [baseline] ANOMALY M-006 seq=865 score=17.75
+[baseline] [baseline] ANOMALY M-006 seq=866 score=17.24
+[baseline] [baseline] ANOMALY M-006 seq=867 score=16.8
+[baseline] [baseline] ANOMALY M-006 seq=868 score=16.31
+[baseline] [baseline] ANOMALY M-006 seq=869 score=15.8
+[baseline] [baseline] ANOMALY M-006 seq=870 score=15.21
+[baseline] [baseline] ANOMALY M-006 seq=872 score=14.57
+[baseline] [baseline] ANOMALY M-006 seq=873 score=13.93
+[baseline] [baseline] ANOMALY M-006 seq=874 score=13.52
+[baseline] [baseline] ANOMALY M-006 seq=875 score=13.15
+[baseline] [baseline] ANOMALY M-006 seq=876 score=12.64
+[baseline] [baseline] ANOMALY M-006 seq=877 score=12.41
+[baseline] [baseline] ANOMALY M-006 seq=878 score=11.91
+[baseline] [baseline] ANOMALY M-006 seq=879 score=11.34
+[baseline] [baseline] ANOMALY M-006 seq=880 score=10.75
+[baseline] [baseline] ANOMALY M-006 seq=881 score=10.26
+[baseline] [baseline] ANOMALY M-006 seq=882 score=9.82
+[baseline] [baseline] ANOMALY M-006 seq=883 score=9.45
+[baseline] [baseline] ANOMALY M-006 seq=884 score=9.13
+[baseline] [baseline] ANOMALY M-006 seq=885 score=8.7
+[baseline] [baseline] ANOMALY M-006 seq=886 score=8.05
+[baseline] [baseline] ANOMALY M-006 seq=888 score=7.74
+[baseline] [baseline] ANOMALY M-006 seq=889 score=7.09
+[baseline] [baseline] ANOMALY M-006 seq=890 score=6.53
+[baseline] [baseline] ANOMALY M-006 seq=891 score=5.89
+[baseline] [baseline] read   15,327  backlog      25 rows  delay   0.3 s  missing  2,528  anomalies 359
+[baseline] [baseline] ANOMALY M-006 seq=893 score=5.3
+[baseline] [baseline] ANOMALY M-006 seq=894 score=5.01
+[plant] run 1793878636: sent 18,000 readings in 91 s
+  plant stopped; waiting until the detector's backlog is 0 ...
+[baseline] [baseline] read   15,450  backlog       0 rows  delay   0.0 s  missing  2,548  anomalies 361
+[baseline] [baseline] stopped: read 15,450 readings, last id 18,000, 2,548 readings missing, 361 anomalies

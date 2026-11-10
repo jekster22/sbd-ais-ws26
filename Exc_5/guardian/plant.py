@@ -83,27 +83,41 @@ class PostgresSink:
 
 
 class KafkaSink:
-    """Your setup: the gateways send every reading to Kafka.
 
-    TODO (Part 2, Stage C1). clients/producer.py of Part 1 shows
-    how to produce. Decide, and justify in your decision record: which topic
-    (created how?), which key, which producer settings?
-    """
+    TOPIC = "readings"
 
     def __init__(self, args):
         from confluent_kafka import Producer
+        self.errors = []
         self.producer = Producer({
             "bootstrap.servers": args.bootstrap,
-            # TODO: more settings?
+            "client.id": "plant-gateways",
+            "partitioner": "murmur2_random",
+            "enable.idempotence": True,
+            "acks": "all",
+            "linger.ms": 5,
+            "compression.type": "lz4",
         })
 
+    def _on_delivery(self, err, msg):
+        if err is not None:
+            self.errors.append(err)
+
     def send(self, reading):
-        # TODO: send the reading (as JSON) to Kafka: self.producer.produce(...)
-        raise NotImplementedError("KafkaSink.send() is part of your solution (Stage C1)")
+        value = json.dumps(reading)
+        while True:
+            try:
+                self.producer.produce(self.TOPIC, key=reading["machine_id"], value=value,
+                                      on_delivery=self._on_delivery)
+                return
+            except BufferError:                 
+                self.producer.poll(0.05)
 
     def tick(self):
         """Called once per tick, after all readings of that tick were sent."""
         self.producer.poll(0)
+        if self.errors:
+            raise RuntimeError(f"Kafka delivery failed: {self.errors[0]}")
 
     def close(self):
         self.producer.flush(10)

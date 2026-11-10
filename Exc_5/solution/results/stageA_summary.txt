@@ -1,0 +1,43 @@
+
+-- A1: 20 machines x 10 Hz, detector drains its backlog after the plant stops
+  run 1793878636
+  table readings (this run):   18,000 rows, 20 machines, 0 duplicates, 18,000 expected from seq ranges -> complete
+  detector read:               15,450 readings, 2,548 counted missing by the model, 361 anomalies
+  rows in the table but never seen by the detector: 2,550 (detector read only rows with id > its last_id)
+  detector progress (every 5 s):   read   backlog   delay[s]   missing
+                                     726         4        0.2        88
+                                   1,576        20        0.3       224
+                                   2,506        36        0.4       354
+                                   3,314        11        0.2       496
+                                   4,231        35        0.3       619
+                                   5,087        12        0.2       748
+                                   5,878        25        0.3       917
+                                   6,763        20        0.3     1,077
+                                   7,607        21        0.3     1,228
+                                   8,441        23        0.3     1,359
+                                   9,328        25        0.3     1,522
+                                  10,153        15        0.2     1,652
+                                  11,055        30        0.3     1,790
+                                  11,865        26        0.2     1,935
+                                  12,722        30        0.3     2,098
+                                  13,585         4        0.2     2,225
+                                  14,422        14        0.2     2,388
+                                  15,327        25        0.3     2,528
+                                  15,450         0        0.0     2,548
+  count query for your answer: docker exec -it postgres psql -U postgres -d factory -c "SELECT count(*) FROM readings WHERE run = (SELECT max(run) FROM readings);"
+
+-- A2: full plant (60 machines x 10 Hz = 600 readings/s), detector stopped right after the plant
+  run 1793878733
+  table readings (this run):   36,000 rows, 60 machines, 0 duplicates, 36,000 expected from seq ranges -> complete
+  detector read:               16,097 readings, 18 counted missing by the model, 0 anomalies
+  rows the detector had not read when stopped: 19,903
+  detector progress (every 5 s):   read   backlog   delay[s]   missing
+                                   2,097     2,265        3.9         3
+                                   4,097     4,422        7.5        18
+                                   6,097     6,517       11.0        18
+                                   8,097     8,820       15.0        18
+                                  10,097    11,020       18.5        18
+                                  12,097    13,281       22.3        18
+                                  14,097    15,571       26.1        18
+                                  16,097    17,771       29.8        18
+  count query for your answer: docker exec -it postgres psql -U postgres -d factory -c "SELECT count(*) FROM readings WHERE run = (SELECT max(run) FROM readings);"
