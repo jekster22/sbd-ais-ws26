@@ -61,7 +61,7 @@ by watching the alert rate drop compared to before, or by replaying labelled dat
 through the pipeline before going live.
 
 ## 4. Final connector
-
+```
 {
   "name": "fraud-connector",
   "config": {
@@ -81,4 +81,4 @@ through the pipeline before going live.
     "message.key.columns": "public.transactions:user_id"
   }
 }
-
+```
