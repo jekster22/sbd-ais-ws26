@@ -1,9 +1,11 @@
 1. Your decision: which architecture and why
+   
 I went with Architecture B The lake is the truth because it avoids keeping a separate state file in sync with the actual data.
 
 With a state file (Architecture A), there is always a gap between writing the files and updating the state. If the job crashes right in between, the next run doesn't know the data was already written and writes it again, creating duplicates. Architecture B solves this by making the lake itself the single source of truth. By writing everything to a STAGING folder first and then moving it into LAKE with a single publish(run) rename, the data either appears completely or not at all. There is no separate state to manage or fall out of sync, and readers never have to worry about deduplicating data on the fly like they would in Architecture C.
 
 2. Explain your result
+
 run_once() passes all five test scenarios in check_all, including the ones that simulate a crash halfway through a run.
 
 Normal and empty runs: It checks lake_position() to see where the last run ended, reads only the new records, and skips writing if nothing new arrived (new.end == start).
@@ -13,6 +15,7 @@ Crash during writing: If the job stops while write_files(new, STAGING) is still 
 Atomic publishing: Once publish(run) moves the finished folder into LAKE, the new records—and the new lake position—become visible at the exact same moment. That guarantees no record is missed and no record is written twice.
 
 3. The output of check_all.
+   
 situation                                 in lake  duplicates  missing  not loaded    run  check
 -----------------------------------------------------------------------------------------------
 1 first run                             2,000,000           0        0           0  18.2s  PASS
