@@ -25,7 +25,7 @@ situation                                 in lake  duplicates  missing  not load
   ... then the next run                 2,200,000           0        0           0   5.8s  PASS
 5 run stops AFTER writing: right after  2,200,000           0        0     100,000         PASS
   ... then the next run                 2,300,000           0        0           0   5.0s  PASS
------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------**
 
 [('1 first run',
   {'topic': 2000000,
