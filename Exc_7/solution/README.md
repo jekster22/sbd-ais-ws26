@@ -15,7 +15,7 @@ Crash during writing: If the job stops while write_files(new, STAGING) is still 
 Atomic publishing: Once publish(run) moves the finished folder into LAKE, the new records—and the new lake position—become visible at the exact same moment. That guarantees no record is missed and no record is written twice.
 
 3. The output of check_all.
-   
+```  
 situation                                 in lake  duplicates  missing  not loaded    run  check
 -----------------------------------------------------------------------------------------------
 1 first run                             2,000,000           0        0           0  18.2s  PASS
@@ -104,3 +104,4 @@ situation                                 in lake  duplicates  missing  not load
    'ok': True,
    'problems': []},
   4.97712779045105)]
+```
