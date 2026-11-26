@@ -12,7 +12,7 @@ Normal and empty runs: It checks lake_position() to see where the last run ended
 
 Crash during writing: If the job stops while write_files(new, STAGING) is still running, the partial files stay isolated in STAGING. LAKE isn't touched, readers never see broken Parquet files, and the next run simply reads the same lake_position() and retries from the exact same spot.
 
-Atomic publishing: Once publish(run) moves the finished folder into LAKE, the new records—and the new lake position—become visible at the exact same moment. That guarantees no record is missed and no record is written twice.
+Atomic publishing: Once publish(run) moves the finished folder into LAKE, the new records and the new lake position become visible at the exact same moment. That guarantees no record is missed and no record is written twice.
 
 3. The output of check_all.
 ```  
